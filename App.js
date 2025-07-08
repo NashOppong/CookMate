@@ -41,7 +41,7 @@ export default function App() {
       const recipes = await getRecipes(tags, size, id);
 
       return recipes?.results;
-      console.log(recipes?.data?.results);
+      //console.log(recipes?.data?.results);
     } catch (err) {
       console.error("Error fetching recipes :>>", err);
     }

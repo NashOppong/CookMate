@@ -5,15 +5,15 @@ const styles = StyleSheet.create({
     flexGrow: 1, // adjust the scrollView to match the
   },
   container: {
-    //flex: 1,
+    flex: 1,
     //justifyContent: "center",
     //alignItems: "center",
     //backgroundColor: colors.green,
-    paddingTop: 20,
+    paddingTop: 10,
   },
   titleBox: {
     //borderWidth: 1,
-    marginTop: 100,
+    marginTop: 20,
     marginHorizontal: 20,
   },
   title1: {
@@ -76,6 +76,10 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     fontWeight: "bold",
   },
+  footer: {
+    borderWidth: 1,
+    alignItems: "center",
+  },
   signUpButton: {
     marginTop: 30,
     paddingHorizontal: 20,
@@ -84,21 +88,25 @@ const styles = StyleSheet.create({
     borderRadius: 20,
     width: 130,
     height: 40,
-    marginLeft: 120,
+    //marginLeft: 120,
   },
   signUpButtonText: {
     fontWeight: "bold",
     color: colors.white,
     marginLeft: 20,
   },
+  altText: {
+    alignItems: "center",
+    justifyContent: "center",
+  },
   google: {
     marginVertical: 10,
-    marginLeft: 110,
+    //marginLeft: 110,
   },
   alreadyAccount: {
     marginTop: 20,
     marginBottom: 20,
-    fontSize: 16,
+    fontSize: 15,
     textAlign: "center",
     justifyContent: "center",
     flexDirection: "row",

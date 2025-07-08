@@ -8,7 +8,7 @@ const skipButton = () => {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => navigation.navigate("HomeScreen")}>
-        <Text style={styles.text}>Skip</Text>
+        <Text style={styles.text}>skip</Text>
       </TouchableOpacity>
     </View>
   );

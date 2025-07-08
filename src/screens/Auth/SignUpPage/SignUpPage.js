@@ -6,6 +6,7 @@ import {
   TextInput,
   TouchableOpacity,
   Image,
+  KeyboardAvoidingView,
 } from "react-native";
 import styles from "./SignUpPageStyle";
 import Fontisto from "@expo/vector-icons/Fontisto";
@@ -24,7 +25,7 @@ const SignUpPage = () => {
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
-      <View style={styles.container}>
+      <KeyboardAvoidingView style={styles.container}>
         <SkipButton />
         <View style={styles.titleBox}>
           <Text style={styles.title1}>Sign Up</Text>
@@ -80,40 +81,42 @@ const SignUpPage = () => {
               <Text style={styles.termsLink}>Terms & Conditions</Text>
             </Text>
           </View>
-          <View style={styles.signUpButton}>
-            <TouchableOpacity>
-              <Text style={styles.signUpButtonText}>Sign Up</Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.altText}>
-            <Text
-              style={{
-                color: colors.green,
-                marginLeft: 130,
-                marginVertical: 10,
-              }}
-            >
-              Or Sign Up with
-            </Text>
-          </View>
-          <View style={styles.google}>
-            <TouchableOpacity onPress={() => console.log("HandleSignUP")}>
-              <Image source={require("../../../images/Gmail.png")} />
-            </TouchableOpacity>
-          </View>
-          <View style={styles.alreadyAccount}>
-            <Text style={styles.alreadyAccountText}>
-              Already have an account?
-            </Text>
-            <TouchableOpacity
-              onPress={() => navigation.navigate("loginScreen")}
-              style={styles.loginLink}
-            >
-              <Text style={styles.loginLink}>Login</Text>
-            </TouchableOpacity>
+          <View style={styles.footer}>
+            <View style={styles.signUpButton}>
+              <TouchableOpacity>
+                <Text style={styles.signUpButtonText}>Sign Up</Text>
+              </TouchableOpacity>
+            </View>
+            <View style={styles.altText}>
+              <Text
+                style={{
+                  color: colors.green,
+                  marginLeft: 130,
+                  marginVertical: 10,
+                }}
+              >
+                Or Sign Up with
+              </Text>
+            </View>
+            <View style={styles.google}>
+              <TouchableOpacity onPress={() => console.log("HandleSignUP")}>
+                <Image source={require("../../../images/Gmail.png")} />
+              </TouchableOpacity>
+            </View>
+            <View style={styles.alreadyAccount}>
+              <Text style={styles.alreadyAccountText}>
+                Already have an account?
+              </Text>
+              <TouchableOpacity
+                onPress={() => navigation.navigate("loginScreen")}
+                style={styles.loginLink}
+              >
+                <Text style={styles.loginLink}>Login</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </View>
-      </View>
+      </KeyboardAvoidingView>
     </ScrollView>
   );
 };
